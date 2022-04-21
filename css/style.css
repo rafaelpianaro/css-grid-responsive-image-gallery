@@ -47,6 +47,8 @@ body {
     pointer-events: none;
     z-index: 4;
     transition: .3s ease-in-out;
+    -webkit-backdrop-filter: blur(5px) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.8);
 }
 
 .gallery-item:hover .text {
@@ -54,5 +56,17 @@ body {
     animation: move-down .3s linear;
     padding: 1em;
     width: 100%;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
+}
+
+@keyframes move-down {
+    0% {
+        top: 10%;
+    }
+    50% {
+        top: 35%;
+    }
+    100% {
+        top: 50%;
+    }
 }
